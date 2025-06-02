@@ -1,0 +1,16 @@
+spring:
+  application:
+  name: Backend
+
+gemini:
+    api:
+      url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
+      key: {YOUR_API_KEY}
+
+resilience4j:
+  ratelimiter:
+    instances:
+      summaryService:
+        limit-for-period: 15
+        limit-refresh-period: 60s
+        timeout-duration: 0s
