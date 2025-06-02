@@ -5,7 +5,7 @@ spring:
 gemini:
     api:
       url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
-      key: {YOUR_API_KEY}
+      key: { KEY }
 
 resilience4j:
   ratelimiter:

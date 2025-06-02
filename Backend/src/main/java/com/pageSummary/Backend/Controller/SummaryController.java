@@ -28,5 +28,4 @@ public class SummaryController {
         response.setStatus("rate_limited");
         return ResponseEntity.ok(response);
     }
-
 }

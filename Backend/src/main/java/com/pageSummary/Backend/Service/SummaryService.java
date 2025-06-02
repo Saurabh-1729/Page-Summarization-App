@@ -46,7 +46,7 @@ public class SummaryService {
 
         } catch (Exception e) {
             SummaryResponse errorResponse = new SummaryResponse();
-            errorResponse.setSummary("Error parsing AI response");
+            errorResponse.setSummary("Error parsing AI response" + e.getMessage());
             errorResponse.setStatus("error");
             return errorResponse;
         }

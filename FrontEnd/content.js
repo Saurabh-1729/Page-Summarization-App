@@ -1,7 +1,12 @@
-// get text of current chrome page
-if (typeof text === 'undefined') {
-    var text = document.body.innerText;
+// Get selected text
+selection = window.getSelection();
+selectedText = selection.toString().trim();
+
+if (selectedText && selectedText.length > 0) {
+    // Use selected text if available
+    text = selectedText;
 } else {
+    // Fallback to entire page content if no selection
     text = document.body.innerText;
 }
 
